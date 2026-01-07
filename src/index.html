@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow" />
+    <meta name="description" content="Todo App" />
+    <meta name="author" content="Alican Akarın" />
+    <script src="app.js" defer></script>
+    <link href="./output.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/8fb9619bfb.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+  </head>
+  <body class="bg-[#0D0714] text-white font-inter antialiased">
+    <!-- Alert Container -->
+    <div id="alertContainer" class="fixed top-7 left-1/2 -translate-x-1/2 flex flex-col gap-3 pointer-events-none z-50"></div>
+
+    <div id="container" class="max-w-md mx-auto mt-7 min-h-screen py-20 px-4 flex flex-col gap-10">
+      <div class="add-todo w-full">
+        <form id="addTodoForm" class="flex w-full gap-2">
+          <input type="text" id="todoName" placeholder="Add a new todo" aria-describedby="todo" class="flex-1 border border-[#3E1671] rounded-xl px-4 py-3" />
+          <button id="addTodoButton" type="submit" class="rounded-xl px-4 py-3 cursor-pointer bg-[#9E78CF]">
+            <i class="fa-solid fa-plus"></i>
+          </button>
+        </form>
+        <!--// <div class="w-auto mx-auto flex justify-center min-h-12 border border-amber-200 rounded-xl mt-5 px-4 py-3 text-amber-200 text-center">Please enter a todo item.</div> -->
+      </div>
+
+      <div class="todo-list flex flex-col gap-4">
+        <h2 class="text-xs font-inter">Tasks to do - <span id="todoCount">0</span></h2>
+        <ul id="todoList" class="flex flex-col gap-3">
+          <!-- <li class="flex items-center justify-between bg-[#15101C] p-5 rounded-2xl">
+            <span class="text-sm text-[#9E78CF]">To study React fundamentals</span>
+            <div class="flex gap-3 items-center">
+              <button class="text-[#9E78CF] hover:text-green-300 cursor-pointer transition-colors delay-100"><i class="fa-solid fa-check text-sm"></i></button>
+              <button class="text-[#9E78CF] hover:text-red-400 cursor-pointer transition-colors delay-100"><i class="fa-solid fa-trash text-sm transition-colors delay-100"></i></button>
+            </div>
+          </li> -->
+        </ul>
+      </div>
+      <div class="completed-todos flex flex-col gap-4">
+        <h2 class="text-xs font-inter">Done - <span id="completedCount">0</span></h2>
+        <ul id="completedTodoList" class="flex flex-col gap-3">
+          <!-- <li class="flex items-center justify-between bg-[#15101C] p-5 rounded-2xl">
+            <span class="text-sm text-green-300 line-through">To study React fundamentals</span>
+            <button class="text-green-300 hover:text-yellow-300 cursor-pointer transition-colors delay-100"><i class="fa-solid fa-angle-up"></i></button>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
